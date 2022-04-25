@@ -12,26 +12,30 @@ Console.WriteLine("Distance between {0},{1} and  {2},{3} is {4:F}", x1, y1, x2, 
 
 static double Distance(double x1, double x2, double y1, double y2)
 {
-    var temp1 = Math.Pow((x2 - x1), 2);
-    var temp2 = Math.Pow((y2 - y1), 2);
-    var result = Math.Sqrt(temp1 + temp2);
+    double temp1 = Math.Pow((x2 - x1), 2);
+    double temp2 = Math.Pow((y2 - y1), 2);
+    double result = Math.Sqrt(temp1 + temp2);
     return result;
 }
 Console.WriteLine("Please Enter p and q coordinates ");
-var p = Convert.ToDouble(Console.ReadLine());
-var q = Convert.ToDouble(Console.ReadLine());
+double p = Convert.ToDouble(Console.ReadLine());
+double q = Convert.ToDouble(Console.ReadLine());
 Console.WriteLine("Please Enter x2 and y2 coordinates ");
-var r = Convert.ToDouble(Console.ReadLine());
-var s = Convert.ToDouble(Console.ReadLine());
-var finalResult2 = Distance(p, r, q, s);
+double r = Convert.ToDouble(Console.ReadLine());
+double s = Convert.ToDouble(Console.ReadLine());
+double finalResult2 = Distance(p, r, q, s);
 Console.WriteLine("Distance between {0},{1} and {2},{3} is {4:F}", p, q, r, s, finalResult2);
-bool status = finalResult.Equals(finalResult2);
-if (status)
-
-    Console.WriteLine("{0} is equal to {1}",
-                           finalResult, finalResult2);
+int res = finalResult.CompareTo(finalResult2);
+Console.WriteLine(res);
+if (res == 0)
+{
+    Console.WriteLine("Lengths are equal!");
+}
+if (res > 0)
+{
+    Console.WriteLine("Line 1 is greator than line 2 ");
+}
 else
-    Console.WriteLine("{0} is not equal to {1}",
-                               finalResult, finalResult2);
-
-
+{
+    Console.WriteLine("Line 2 is greator than line 1 ");
+}
