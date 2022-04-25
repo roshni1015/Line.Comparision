@@ -1,6 +1,5 @@
 ﻿// See https://aka.ms/new-console-template for more information
 Console.WriteLine("Welcome to Line comparision!");
-Console.WriteLine("Welcome to Line Comparison problem !");
 Console.WriteLine("Please Enter x1 and y1 coordinates :");
 double x1 = Convert.ToDouble(Console.ReadLine());
 double y1 = Convert.ToDouble(Console.ReadLine());
